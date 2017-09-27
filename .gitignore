@@ -1,5 +1,5 @@
 *
-!/Lab*
-!*.cpp
-!makefile
-!Doxyfile
+!~/Lab*/*.cpp
+!~/Lab*/*.h
+!~/Lab*/makefile
+!~/Lab*/Doxyfile
