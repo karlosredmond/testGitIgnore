@@ -1,6 +1,16 @@
+/*! 
+  \\ Author: Karl Redmond
+  \\ Date: 10th Oct 2017 
+  \\ brief A Semaphore Implementation to show serialization, where task A must happen before task B, ie taskOne before taskTwo
+  \									\
+  \\ Uses C++11 features such as mutex and condition variables to implement Semaphore
+
+*/
+
 #include "Semaphore.h"
 #include <iostream>
 #include <thread>
+
 
 void taskOne(std::shared_ptr<Semaphore> theSemaphore){
   std::cout <<"I ";

@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "mstw",
   1: "s",
-  2: "s",
+  2: "ms",
   3: "mstw"
 };
 
