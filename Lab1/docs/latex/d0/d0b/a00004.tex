@@ -1,0 +1,59 @@
+\hypertarget{a00004}{}\subsection{signal.\+cpp File Reference}
+\label{a00004}\index{signal.\+cpp@{signal.\+cpp}}
+
+
+\subsubsection{Function Documentation}
+\index{signal.\+cpp@{signal.\+cpp}!main@{main}}
+\index{main@{main}!signal.\+cpp@{signal.\+cpp}}
+\paragraph[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{a00004_a840291bc02cba5474a4cb46a9b9566fe}{}\label{a00004_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCode}
+00020               \{
+00021   std::thread threadOne, threadTwo;
+00022   std::shared\_ptr<Semaphore> sem( \textcolor{keyword}{new} \hyperlink{a00001}{Semaphore});
+00024   threadOne=std::thread(\hyperlink{a00004_ac144858f71b052ef85476785120ec7fa}{taskTwo},sem);
+00025   threadTwo=std::thread(\hyperlink{a00004_a3b369c364dd84f7b8e12882541c3f808}{taskOne},sem);
+00026   std::cout << \textcolor{stringliteral}{"Launched from the main\(\backslash\)n"};
+00027   threadOne.join();
+00028   threadTwo.join();
+00029   \textcolor{keywordflow}{return} 0;
+00030 \}
+\end{DoxyCode}
+\index{signal.\+cpp@{signal.\+cpp}!task\+One@{task\+One}}
+\index{task\+One@{task\+One}!signal.\+cpp@{signal.\+cpp}}
+\paragraph[{\texorpdfstring{task\+One(std\+::shared\+\_\+ptr$<$\+Semaphore$>$ the\+Semaphore)}{taskOne(std::shared_ptr<Semaphore> theSemaphore)}}]{\setlength{\rightskip}{0pt plus 5cm}void task\+One (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<${\bf Semaphore}$>$}]{the\+Semaphore}
+\end{DoxyParamCaption}
+)}\hypertarget{a00004_a3b369c364dd84f7b8e12882541c3f808}{}\label{a00004_a3b369c364dd84f7b8e12882541c3f808}
+
+\begin{DoxyCode}
+00005                                                    \{
+00006   std::cout <<\textcolor{stringliteral}{"I "};
+00007   std::cout << \textcolor{stringliteral}{"must "};
+00008   std::cout << \textcolor{stringliteral}{"print "};
+00009   std::cout << \textcolor{stringliteral}{"first"}<<std::endl;
+00010   theSemaphore->Signal();
+00011 \}
+\end{DoxyCode}
+\index{signal.\+cpp@{signal.\+cpp}!task\+Two@{task\+Two}}
+\index{task\+Two@{task\+Two}!signal.\+cpp@{signal.\+cpp}}
+\paragraph[{\texorpdfstring{task\+Two(std\+::shared\+\_\+ptr$<$\+Semaphore$>$ the\+Semaphore)}{taskTwo(std::shared_ptr<Semaphore> theSemaphore)}}]{\setlength{\rightskip}{0pt plus 5cm}void task\+Two (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<${\bf Semaphore}$>$}]{the\+Semaphore}
+\end{DoxyParamCaption}
+)}\hypertarget{a00004_ac144858f71b052ef85476785120ec7fa}{}\label{a00004_ac144858f71b052ef85476785120ec7fa}
+
+\begin{DoxyCode}
+00012                                                    \{
+00013   theSemaphore->Wait();
+00014   std::cout <<\textcolor{stringliteral}{"This "};
+00015   std::cout << \textcolor{stringliteral}{"will "};
+00016   std::cout << \textcolor{stringliteral}{"appear "};
+00017   std::cout << \textcolor{stringliteral}{"second"}<<std::endl;
+00018 \}
+\end{DoxyCode}

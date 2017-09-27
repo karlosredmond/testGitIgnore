@@ -18,10 +18,6 @@ ALL: signal.o Semaphore.o
 
 #this is customary and just deletes all .o files
 
-DOC: $(OBJ) 
-	doxygen makefile
-	mv html ./docs
-	mv latex ./docs
 
 CLEAN:
 	rm *.o

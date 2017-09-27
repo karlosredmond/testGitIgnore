@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="d7/d46/a00002" kind="file" language="C++">
+    <compoundname>Semaphore.cpp</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d7c/a00003" kindref="compound">Semaphore.h</ref>&quot;</highlight></codeline>
+<codeline lineno="12" refid="d8/d84/a00001_1ade7c17fb79686f6fe6865d28e80d5a92" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d84/a00001_1ade7c17fb79686f6fe6865d28e80d5a92" kindref="member">Semaphore::Wait</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_lock&lt;<sp/>std::mutex<sp/>&gt;<sp/>lock(<ref refid="d8/d84/a00001_1a5c751dae9068bdb864af14129bbe0fa1" kindref="member">m_mutex</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/d84/a00001_1a12a97001c2c2d1e81297ba6bd8ce1148" kindref="member">m_condition</ref>.wait(lock,[&amp;]()-&gt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d8/d84/a00001_1a07984e3c1945516f236d5d0f8024bc3a" kindref="member">m_uiCount</ref>&gt;0;<sp/>});</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="d8/d84/a00001_1a07984e3c1945516f236d5d0f8024bc3a" kindref="member">m_uiCount</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>R,</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>P<sp/>&gt;</highlight></codeline>
+<codeline lineno="20" refid="d8/d84/a00001_1a0843e39259d9d7e34c3f1b02e0e3d6b7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d84/a00001_1ade7c17fb79686f6fe6865d28e80d5a92" kindref="member">Semaphore::Wait</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::chrono::duration&lt;R,P&gt;&amp;<sp/>crRelTime)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_lock&lt;<sp/>std::mutex<sp/>&gt;<sp/>lock(<ref refid="d8/d84/a00001_1a5c751dae9068bdb864af14129bbe0fa1" kindref="member">m_mutex</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d8/d84/a00001_1a12a97001c2c2d1e81297ba6bd8ce1148" kindref="member">m_condition</ref>.wait_for(lock,crRelTime,[&amp;]()-&gt;bool{<sp/>return<sp/>m_uiCount&gt;0;<sp/>})){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="d8/d84/a00001_1a07984e3c1945516f236d5d0f8024bc3a" kindref="member">m_uiCount</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="d8/d84/a00001_1adf531976162ff22f9b4d86ea0c4e1a87" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d84/a00001_1adf531976162ff22f9b4d86ea0c4e1a87" kindref="member">Semaphore::Signal</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_lock&lt;<sp/>std::mutex<sp/>&gt;<sp/>lock(<ref refid="d8/d84/a00001_1a5c751dae9068bdb864af14129bbe0fa1" kindref="member">m_mutex</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="d8/d84/a00001_1a07984e3c1945516f236d5d0f8024bc3a" kindref="member">m_uiCount</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/d84/a00001_1a12a97001c2c2d1e81297ba6bd8ce1148" kindref="member">m_condition</ref>.notify_one();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Semaphore.cpp"/>
+  </compounddef>
+</doxygen>

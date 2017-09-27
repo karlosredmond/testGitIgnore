@@ -1,0 +1,109 @@
+\hypertarget{a00001}{}\subsection{Semaphore}
+\label{a00001}\index{Semaphore@{Semaphore}}
+
+
+A \hyperlink{a00001}{Semaphore} Implementation.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}
+
+
+
+Collaboration diagram for Semaphore\+:
+% FIG 0
+\subsubsection*{Public Member Functions}
+\subsubsection*{Private Attributes}
+
+
+\subsubsection{Detailed Description}
+A \hyperlink{a00001}{Semaphore} Implementation. 
+
+Uses C++11 features such as mutex and condition variables to implement \hyperlink{a00001}{Semaphore} 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\index{Semaphore@{Semaphore}!Semaphore@{Semaphore}}
+\index{Semaphore@{Semaphore}!Semaphore@{Semaphore}}
+\paragraph[{\texorpdfstring{Semaphore(unsigned int ui\+Count=0) }{Semaphore(unsigned int uiCount=0) }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Semaphore} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ui\+Count = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{a00001_a38471b7f3f0c2cdc009bf0cc8a0782e8}{}\label{a00001_a38471b7f3f0c2cdc009bf0cc8a0782e8}
+
+\begin{DoxyCode}
+00019           : \hyperlink{a00001_a07984e3c1945516f236d5d0f8024bc3a}{m\_uiCount}(uiCount) \{ \};
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\index{Semaphore@{Semaphore}!Signal@{Signal}}
+\index{Signal@{Signal}!Semaphore@{Semaphore}}
+\paragraph[{\texorpdfstring{Signal()}{Signal()}}]{\setlength{\rightskip}{0pt plus 5cm}void Signal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{a00001_adf531976162ff22f9b4d86ea0c4e1a87}{}\label{a00001_adf531976162ff22f9b4d86ea0c4e1a87}
+
+\begin{DoxyCode}
+00031 \{
+00032       std::unique\_lock< std::mutex > lock(\hyperlink{a00001_a5c751dae9068bdb864af14129bbe0fa1}{m\_mutex});
+00033       ++\hyperlink{a00001_a07984e3c1945516f236d5d0f8024bc3a}{m\_uiCount};
+00034       \hyperlink{a00001_a12a97001c2c2d1e81297ba6bd8ce1148}{m\_condition}.notify\_one();
+00035 \}
+\end{DoxyCode}
+\index{Semaphore@{Semaphore}!Wait@{Wait}}
+\index{Wait@{Wait}!Semaphore@{Semaphore}}
+\paragraph[{\texorpdfstring{Wait()}{Wait()}}]{\setlength{\rightskip}{0pt plus 5cm}void Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{a00001_ade7c17fb79686f6fe6865d28e80d5a92}{}\label{a00001_ade7c17fb79686f6fe6865d28e80d5a92}
+
+\begin{DoxyCode}
+00013 \{
+00014       std::unique\_lock< std::mutex > lock(\hyperlink{a00001_a5c751dae9068bdb864af14129bbe0fa1}{m\_mutex});
+00015       \hyperlink{a00001_a12a97001c2c2d1e81297ba6bd8ce1148}{m\_condition}.wait(lock,[&]()->\textcolor{keywordtype}{bool}\{ \textcolor{keywordflow}{return} \hyperlink{a00001_a07984e3c1945516f236d5d0f8024bc3a}{m\_uiCount}>0; \});
+00016       --\hyperlink{a00001_a07984e3c1945516f236d5d0f8024bc3a}{m\_uiCount};
+00017 \}
+\end{DoxyCode}
+\index{Semaphore@{Semaphore}!Wait@{Wait}}
+\index{Wait@{Wait}!Semaphore@{Semaphore}}
+\paragraph[{\texorpdfstring{Wait(const std\+::chrono\+::duration$<$\+R,\+P$>$\& cr\+Rel\+Time)}{Wait(const std::chrono::duration<R,P>& crRelTime)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Wait (
+\begin{DoxyParamCaption}
+\item[{const std\+::chrono\+::duration$<$R,P$>$\&}]{cr\+Rel\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{a00001_a0843e39259d9d7e34c3f1b02e0e3d6b7}{}\label{a00001_a0843e39259d9d7e34c3f1b02e0e3d6b7}
+
+\begin{DoxyCode}
+00021 \{
+00022       std::unique\_lock< std::mutex > lock(\hyperlink{a00001_a5c751dae9068bdb864af14129bbe0fa1}{m\_mutex});
+00023       \textcolor{keywordflow}{if} (!\hyperlink{a00001_a12a97001c2c2d1e81297ba6bd8ce1148}{m\_condition}.wait\_for(lock,crRelTime,[&]()->bool\{ return m\_uiCount>0; \}))\{
+00024       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00025       \}
+00026       --\hyperlink{a00001_a07984e3c1945516f236d5d0f8024bc3a}{m\_uiCount};
+00027       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00028 \}
+\end{DoxyCode}
+
+
+\subsubsection{Field Documentation}
+\index{Semaphore@{Semaphore}!m\+\_\+condition@{m\+\_\+condition}}
+\index{m\+\_\+condition@{m\+\_\+condition}!Semaphore@{Semaphore}}
+\paragraph[{\texorpdfstring{m\+\_\+condition}{m_condition}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::condition\+\_\+variable m\+\_\+condition\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00001_a12a97001c2c2d1e81297ba6bd8ce1148}{}\label{a00001_a12a97001c2c2d1e81297ba6bd8ce1148}
+\index{Semaphore@{Semaphore}!m\+\_\+mutex@{m\+\_\+mutex}}
+\index{m\+\_\+mutex@{m\+\_\+mutex}!Semaphore@{Semaphore}}
+\paragraph[{\texorpdfstring{m\+\_\+mutex}{m_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00001_a5c751dae9068bdb864af14129bbe0fa1}{}\label{a00001_a5c751dae9068bdb864af14129bbe0fa1}
+\index{Semaphore@{Semaphore}!m\+\_\+ui\+Count@{m\+\_\+ui\+Count}}
+\index{m\+\_\+ui\+Count@{m\+\_\+ui\+Count}!Semaphore@{Semaphore}}
+\paragraph[{\texorpdfstring{m\+\_\+ui\+Count}{m_uiCount}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int m\+\_\+ui\+Count\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00001_a07984e3c1945516f236d5d0f8024bc3a}{}\label{a00001_a07984e3c1945516f236d5d0f8024bc3a}
+
+
+Holds the \hyperlink{a00001}{Semaphore} count. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00003}{Semaphore.\+h}\item 
+\hyperlink{a00002}{Semaphore.\+cpp}\end{DoxyCompactItemize}
