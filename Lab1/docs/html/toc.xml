@@ -1,0 +1,239 @@
+<toc label="Lab 1" topic="index.html">
+  <topic label="Data Types List" href="annotated.html">
+    <topic label="Data Types List" href="annotated.html">
+      <topic label="Semaphore" href="d8/d84/a00001.html">
+        <topic label="Semaphore" href="d8/d84/a00001.html#a38471b7f3f0c2cdc009bf0cc8a0782e8"/>
+        <topic label="Signal" href="d8/d84/a00001.html#adf531976162ff22f9b4d86ea0c4e1a87"/>
+        <topic label="Wait" href="d8/d84/a00001.html#ade7c17fb79686f6fe6865d28e80d5a92"/>
+        <topic label="Wait" href="d8/d84/a00001.html#a0843e39259d9d7e34c3f1b02e0e3d6b7"/>
+        <topic label="m_condition" href="d8/d84/a00001.html#a12a97001c2c2d1e81297ba6bd8ce1148"/>
+        <topic label="m_mutex" href="d8/d84/a00001.html#a5c751dae9068bdb864af14129bbe0fa1"/>
+        <topic label="m_uiCount" href="d8/d84/a00001.html#a07984e3c1945516f236d5d0f8024bc3a"/>
+      </topic>
+    </topic>
+    <topic label="Data Types" href="classes.html"/>
+    <topic label="Design Unit Hierarchy" href="hierarchy.html">
+      <topic label="basic_string&lt;char&gt;"/>
+      <topic label="basic_string&lt;wchar_t&gt;"/>
+      <topic label="Semaphore" href="d8/d84/a00001.html"/>
+      <topic label="allocator&lt;T&gt;"/>
+      <topic label="array&lt;T&gt;"/>
+      <topic label="auto_ptr&lt;T&gt;"/>
+      <topic label="basic_string&lt;Char&gt;">
+        <topic label="string"/>
+        <topic label="wstring"/>
+      </topic>
+      <topic label="basic_string&lt;Char&gt;::const_iterator"/>
+      <topic label="basic_string&lt;Char&gt;::const_reverse_iterator"/>
+      <topic label="basic_string&lt;Char&gt;::iterator"/>
+      <topic label="basic_string&lt;Char&gt;::reverse_iterator"/>
+      <topic label="bitset&lt;Bits&gt;"/>
+      <topic label="complex"/>
+      <topic label="deque&lt;T&gt;"/>
+      <topic label="deque&lt;T&gt;::const_iterator"/>
+      <topic label="deque&lt;T&gt;::const_reverse_iterator"/>
+      <topic label="deque&lt;T&gt;::iterator"/>
+      <topic label="deque&lt;T&gt;::reverse_iterator"/>
+      <topic label="error_category"/>
+      <topic label="error_code"/>
+      <topic label="error_condition"/>
+      <topic label="exception">
+        <topic label="bad_alloc"/>
+        <topic label="bad_cast"/>
+        <topic label="bad_exception"/>
+        <topic label="bad_typeid"/>
+        <topic label="ios_base::failure"/>
+        <topic label="logic_error">
+          <topic label="domain_error"/>
+          <topic label="invalid_argument"/>
+          <topic label="length_error"/>
+          <topic label="out_of_range"/>
+        </topic>
+        <topic label="runtime_error">
+          <topic label="overflow_error"/>
+          <topic label="range_error"/>
+          <topic label="underflow_error"/>
+        </topic>
+      </topic>
+      <topic label="forward_list&lt;T&gt;"/>
+      <topic label="forward_list&lt;T&gt;::const_iterator"/>
+      <topic label="forward_list&lt;T&gt;::const_reverse_iterator"/>
+      <topic label="forward_list&lt;T&gt;::iterator"/>
+      <topic label="forward_list&lt;T&gt;::reverse_iterator"/>
+      <topic label="ios_base">
+        <topic label="basic_ios&lt;char  &gt;"/>
+        <topic label="basic_ios&lt;char &gt;"/>
+        <topic label="basic_ios&lt;char&gt;"/>
+        <topic label="basic_ios&lt;wchar_t  &gt;"/>
+        <topic label="basic_ios&lt;wchar_t &gt;"/>
+        <topic label="basic_ios&lt;wchar_t&gt;"/>
+        <topic label="basic_ios&lt;Char&gt;">
+          <topic label="basic_istream&lt;char  &gt;"/>
+          <topic label="basic_istream&lt;char &gt;"/>
+          <topic label="basic_istream&lt;char&gt;"/>
+          <topic label="basic_istream&lt;wchar_t  &gt;"/>
+          <topic label="basic_istream&lt;wchar_t &gt;"/>
+          <topic label="basic_istream&lt;wchar_t&gt;"/>
+          <topic label="basic_ostream&lt;char  &gt;"/>
+          <topic label="basic_ostream&lt;char &gt;"/>
+          <topic label="basic_ostream&lt;char&gt;"/>
+          <topic label="basic_ostream&lt;wchar_t  &gt;"/>
+          <topic label="basic_ostream&lt;wchar_t &gt;"/>
+          <topic label="basic_ostream&lt;wchar_t&gt;"/>
+          <topic label="basic_istream&lt;Char&gt;">
+            <topic label="basic_ifstream&lt;char&gt;"/>
+            <topic label="basic_ifstream&lt;wchar_t&gt;"/>
+            <topic label="basic_iostream&lt;char &gt;"/>
+            <topic label="basic_iostream&lt;wchar_t &gt;"/>
+            <topic label="basic_istringstream&lt;char&gt;"/>
+            <topic label="basic_istringstream&lt;wchar_t&gt;"/>
+            <topic label="basic_ifstream&lt;Char&gt;">
+              <topic label="ifstream"/>
+              <topic label="wifstream"/>
+            </topic>
+            <topic label="basic_iostream&lt;Char&gt;">
+              <topic label="basic_fstream&lt;char&gt;"/>
+              <topic label="basic_fstream&lt;wchar_t&gt;"/>
+              <topic label="basic_stringstream&lt;char&gt;"/>
+              <topic label="basic_stringstream&lt;wchar_t&gt;"/>
+              <topic label="basic_fstream&lt;Char&gt;">
+                <topic label="fstream"/>
+                <topic label="wfstream"/>
+              </topic>
+              <topic label="basic_stringstream&lt;Char&gt;">
+                <topic label="stringstream"/>
+                <topic label="wstringstream"/>
+              </topic>
+            </topic>
+            <topic label="basic_istringstream&lt;Char&gt;">
+              <topic label="istringstream"/>
+              <topic label="wistringstream"/>
+            </topic>
+            <topic label="istream"/>
+            <topic label="wistream"/>
+          </topic>
+          <topic label="basic_ostream&lt;Char&gt;">
+            <topic label="basic_iostream&lt;char &gt;"/>
+            <topic label="basic_iostream&lt;wchar_t &gt;"/>
+            <topic label="basic_ofstream&lt;char&gt;"/>
+            <topic label="basic_ofstream&lt;wchar_t&gt;"/>
+            <topic label="basic_ostringstream&lt;char&gt;"/>
+            <topic label="basic_ostringstream&lt;wchar_t&gt;"/>
+            <topic label="basic_iostream&lt;Char&gt;"/>
+            <topic label="basic_ofstream&lt;Char&gt;">
+              <topic label="ofstream"/>
+              <topic label="wofstream"/>
+            </topic>
+            <topic label="basic_ostringstream&lt;Char&gt;">
+              <topic label="ostringstream"/>
+              <topic label="wostringstream"/>
+            </topic>
+            <topic label="ostream"/>
+            <topic label="wostream"/>
+          </topic>
+          <topic label="ios"/>
+          <topic label="wios"/>
+        </topic>
+      </topic>
+      <topic label="list&lt;T&gt;"/>
+      <topic label="list&lt;T&gt;::const_iterator"/>
+      <topic label="list&lt;T&gt;::const_reverse_iterator"/>
+      <topic label="list&lt;T&gt;::iterator"/>
+      <topic label="list&lt;T&gt;::reverse_iterator"/>
+      <topic label="map&lt;K, T&gt;"/>
+      <topic label="map&lt;K, T&gt;::const_iterator"/>
+      <topic label="map&lt;K, T&gt;::const_reverse_iterator"/>
+      <topic label="map&lt;K, T&gt;::iterator"/>
+      <topic label="map&lt;K, T&gt;::reverse_iterator"/>
+      <topic label="multimap&lt;K, T&gt;"/>
+      <topic label="multimap&lt;K, T&gt;::const_iterator"/>
+      <topic label="multimap&lt;K, T&gt;::const_reverse_iterator"/>
+      <topic label="multimap&lt;K, T&gt;::iterator"/>
+      <topic label="multimap&lt;K, T&gt;::reverse_iterator"/>
+      <topic label="multiset&lt;K&gt;"/>
+      <topic label="multiset&lt;K&gt;::const_iterator"/>
+      <topic label="multiset&lt;K&gt;::const_reverse_iterator"/>
+      <topic label="multiset&lt;K&gt;::iterator"/>
+      <topic label="multiset&lt;K&gt;::reverse_iterator"/>
+      <topic label="priority_queue&lt;T&gt;"/>
+      <topic label="queue&lt;T&gt;"/>
+      <topic label="set&lt;K&gt;"/>
+      <topic label="set&lt;K&gt;::const_iterator"/>
+      <topic label="set&lt;K&gt;::const_reverse_iterator"/>
+      <topic label="set&lt;K&gt;::iterator"/>
+      <topic label="set&lt;K&gt;::reverse_iterator"/>
+      <topic label="smart_ptr&lt;T&gt;"/>
+      <topic label="stack&lt;T&gt;"/>
+      <topic label="string::const_iterator"/>
+      <topic label="string::const_reverse_iterator"/>
+      <topic label="string::iterator"/>
+      <topic label="string::reverse_iterator"/>
+      <topic label="system_error"/>
+      <topic label="thread"/>
+      <topic label="unique_ptr&lt;T&gt;"/>
+      <topic label="unordered_map&lt;K, T&gt;"/>
+      <topic label="unordered_map&lt;K, T&gt;::const_iterator"/>
+      <topic label="unordered_map&lt;K, T&gt;::const_reverse_iterator"/>
+      <topic label="unordered_map&lt;K, T&gt;::iterator"/>
+      <topic label="unordered_map&lt;K, T&gt;::reverse_iterator"/>
+      <topic label="unordered_multimap&lt;K, T&gt;"/>
+      <topic label="unordered_multimap&lt;K, T&gt;::const_iterator"/>
+      <topic label="unordered_multimap&lt;K, T&gt;::const_reverse_iterator"/>
+      <topic label="unordered_multimap&lt;K, T&gt;::iterator"/>
+      <topic label="unordered_multimap&lt;K, T&gt;::reverse_iterator"/>
+      <topic label="unordered_multiset&lt;K&gt;"/>
+      <topic label="unordered_multiset&lt;K&gt;::const_iterator"/>
+      <topic label="unordered_multiset&lt;K&gt;::const_reverse_iterator"/>
+      <topic label="unordered_multiset&lt;K&gt;::iterator"/>
+      <topic label="unordered_multiset&lt;K&gt;::reverse_iterator"/>
+      <topic label="unordered_set&lt;K&gt;"/>
+      <topic label="unordered_set&lt;K&gt;::const_iterator"/>
+      <topic label="unordered_set&lt;K&gt;::const_reverse_iterator"/>
+      <topic label="unordered_set&lt;K&gt;::iterator"/>
+      <topic label="unordered_set&lt;K&gt;::reverse_iterator"/>
+      <topic label="valarray&lt;T&gt;"/>
+      <topic label="vector&lt;T&gt;"/>
+      <topic label="vector&lt;T&gt;::const_iterator"/>
+      <topic label="vector&lt;T&gt;::const_reverse_iterator"/>
+      <topic label="vector&lt;T&gt;::iterator"/>
+      <topic label="vector&lt;T&gt;::reverse_iterator"/>
+      <topic label="weak_ptr&lt;T&gt;"/>
+      <topic label="wstring::const_iterator"/>
+      <topic label="wstring::const_reverse_iterator"/>
+      <topic label="wstring::iterator"/>
+      <topic label="wstring::reverse_iterator"/>
+      <topic label="K"/>
+      <topic label="T"/>
+    </topic>
+    <topic label="Data Fields" href="functions.html">
+      <topic label="All" href="functions.html"/>
+      <topic label="Functions/Subroutines" href="functions_func.html"/>
+      <topic label="Variables" href="functions_vars.html"/>
+    </topic>
+  </topic>
+  <topic label="Files">
+    <topic label="File List" href="files.html">
+      <topic label="Semaphore.cpp" href="d7/d46/a00002.html"/>
+      <topic label="Semaphore.h" href="d1/d7c/a00003.html">
+        <topic label="Semaphore" href="d8/d84/a00001.html">
+          <topic label="Semaphore" href="d8/d84/a00001.html#a38471b7f3f0c2cdc009bf0cc8a0782e8"/>
+          <topic label="Signal" href="d8/d84/a00001.html#adf531976162ff22f9b4d86ea0c4e1a87"/>
+          <topic label="Wait" href="d8/d84/a00001.html#ade7c17fb79686f6fe6865d28e80d5a92"/>
+          <topic label="Wait" href="d8/d84/a00001.html#a0843e39259d9d7e34c3f1b02e0e3d6b7"/>
+          <topic label="m_condition" href="d8/d84/a00001.html#a12a97001c2c2d1e81297ba6bd8ce1148"/>
+          <topic label="m_mutex" href="d8/d84/a00001.html#a5c751dae9068bdb864af14129bbe0fa1"/>
+          <topic label="m_uiCount" href="d8/d84/a00001.html#a07984e3c1945516f236d5d0f8024bc3a"/>
+        </topic>
+      </topic>
+      <topic label="signal.cpp" href="d0/d0b/a00004.html">
+        <topic label="main" href="d0/d0b/a00004.html#a840291bc02cba5474a4cb46a9b9566fe"/>
+        <topic label="taskOne" href="d0/d0b/a00004.html#a3b369c364dd84f7b8e12882541c3f808"/>
+        <topic label="taskTwo" href="d0/d0b/a00004.html#ac144858f71b052ef85476785120ec7fa"/>
+      </topic>
+    </topic>
+    <topic label="Globals" href="globals.html">
+      <topic label="All" href="globals.html"/>
+      <topic label="Functions/Subroutines" href="globals_func.html"/>
+    </topic>
+  </topic>
+</toc>
