@@ -1,5 +1,5 @@
-#Joseph Kehoe 13/9/2017
-#Second improved Makefile
+#Karl Redmond 03/10/2017
+#Makefile
 #Used to contain commands to compile projects
 #Equivalent(?) to a project file in VStudio -- only better!
 #See http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/ for info.
@@ -13,7 +13,7 @@ CFLAGS= -std=c++11 -pthread -I.
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 ALL: signal.o Semaphore.o
-	$(CC) -o sigexe signal.o Semaphore.o $(CFLAGS)
+	$(CC) -o signal signal.o Semaphore.o $(CFLAGS)
 
 
 #this is customary and just deletes all .o files
